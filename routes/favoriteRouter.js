@@ -32,7 +32,7 @@ favoriteRouter
           res.json(favorite);
         });
       } else {
-        Favorite.create({ user: req.user._id, campsite: req.body })
+        Favorite.create({ user: req.user._id, campsites: req.body })
           .then((favorite) => {
             console.log("favorite Created", favorite);
             res.statusCode = 200;
